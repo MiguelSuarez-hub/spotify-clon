@@ -3,6 +3,7 @@ import PlaylistItemCard from '@/components/PlaylistItemCard.astro';
 import Layout from '../layouts/Layout.astro';
 
 import { playlists } from '@/lib/data';
+import Greeting from '@/components/Greeting.svelte';
 ---
 
 <Layout title="Spotify-clon">
@@ -10,7 +11,7 @@ import { playlists } from '@/lib/data';
     <!-- Page header  -->
     <div class="relative z-10 px-6 pt-10">
       <!-- Greetings -->
-      <h3 class="text-3xl font-bold my-5">Buenos dias</h3>
+      <Greeting />
       <div class="flex flex-wrap gap-4">
         {playlists.map((playlist) => <PlaylistItemCard playlist={playlist}/>)}
       </div>
